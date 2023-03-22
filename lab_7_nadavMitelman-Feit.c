@@ -9,19 +9,20 @@ void swap(int *a, int *b)
     *b=temp;
 }
 
-void bubbleSort(*arr){
+void bubbleSort(int *arr)
+{
     for(int i=0;i<LEN-1;i++)
     {
         int numSwaps=0;
-        for(int j=i;j<LEN-1;j++)
+        for(int j=i;j<LEN-i-1;j++)
         {
             if(arr[j]>=arr[j+1])
             {
-                swap(&arr[j],arr[j+1]);
+                swap(&arr[j],&arr[j+1]);
                 numSwaps++;
             }
         }
-        printf("Iteration #%d: %d\n",i,num_swaps)
+        printf("Iteration #%d: %d\n",i+1,numSwaps);
     }
 }
 
